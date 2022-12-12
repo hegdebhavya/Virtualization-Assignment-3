@@ -1,5 +1,12 @@
 ## Assignment 3 
 
+
+Student Name : Bhavya Hegde <br>
+email : bhavya.hegde@sjsu.edu
+
+
+## Modify the CPUID emulation code in KVM to report back additional information when special CPUID leaf nodes are requested. 
+
 ### Implementation of CPUID leaf nodes 0x4FFFFFFE and 0x4FFFFFFF <hr style="border:2px solid gray">
 
 * To add support for 0x4ffffffe and 0x4fffffff I have modified the cpuid.c and vmx.c. The SDM defines Exit reasons on Volume 3 Appendix C VMX Basic Exit Reasons section. Here we find all the exit reasons defined by Intel SDM. The Exit reasons supported by VMX are mentioned in file vmx.h at linux/arch/kvm.vmx/vmx.h
