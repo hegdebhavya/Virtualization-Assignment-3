@@ -93,6 +93,20 @@ We observe that the reboot  caused 3,334,075 (0x0032dfbb) total exits.
 Ans.
 I collected the output of cpuid command for exit reasons from 0 - 75 and found the following values in the counter
 
+| Exit Name | Exit Reason | Exit Frequency |
+| :---         |     :---:      |          ---: |
+| 48   | EXIT_REASON_EPT_VIOLATION    | 502051    |
+| 30    | EXIT_REASON_IO_INSTRUCTION      | 195510      |
+| 10  | EXIT_REASON_CPUID     | 72893    |
+| 28    | EXIT_REASON_CR_ACCESS       | 27148      |
+| 0  | EXIT_REASON_EXCEPTION_NMI    | 13994    |
+| 40    | EXIT_REASON_PAUSE_INSTRUCTION      | 1987      |
+| 31   | EXIT_REASON_MSR_READ                | 162    |
+|54    | EXIT_REASON_WBINVD       | 6      |
+|55   |  EXIT_REASON_XSETBV     | 2    |
+| 29   | EXIT_REASON_DR_ACCESS      | 1      |
+
+
 
 I found Exit reason 48 (EPT_VIOLATION) and Exit reason 30 (IO_INSTRUCTION) to be most frequent. 
 The Exit reason 29 (DR_ACCESS) is the least frequent.
